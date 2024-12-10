@@ -1,0 +1,110 @@
+<div class=" d-flex justify-content-around align-items-center">
+
+  <div class="container vh-100">
+    <div class="d-flex background align-items-center justify-content-center" dir={{langVar.dir}}>
+
+      <div class="col-xl-5 col-12">
+
+        <div id="LoginContainer" class="d-flex flex-column p-5 ">
+
+          <form [formGroup]="loginForm">
+
+            <div class="Poppins mt-5 p-2">
+
+              <div class="">
+                <input type="text" placeholder="{{langVar.placeholder.name}}" maxlength="25" class="" pInputText
+                       formControlName="userName" />
+                <div *ngIf="loginFormControls.userName.dirty && loginFormControls.userName.invalid"
+                     class="alert alert-danger">
+                  <div [ngClass]="{'text-left': currentLang == 'en', 'text-right': currentLang == 'en' }"
+                       *ngIf="loginFormControls.userName.errors.required " style="text-align: center">
+                    User name required
+                  </div>
+  
+                </div>
+              </div>
+
+              <div class="mt-4 position-relative">
+                <input type="{{inputType}}" placeholder="{{langVar.placeholder.password}}" maxlength="25" class=""
+                       pInputText formControlName="password" />
+                <i class="fa fa-eye{{pView}}" [ngClass]="{'eyeAR': currentLang == 'ar'}" aria-hidden="true"
+                   (click)="viewPassword()"></i>
+              </div>
+              <div *ngIf="loginFormControls.password.dirty && loginFormControls.password.invalid"
+                   class="alert alert-danger"
+                   [ngClass]="{'text-left': currentLang == 'en', 'text-right': currentLang == 'en' }">
+                <div [ngClass]="{'text-left': currentLang == 'en', 'text-right': currentLang == 'en' }"
+                     *ngIf="loginFormControls.password.errors.required" style="text-align: center">
+                  {{langVar.invalid.requiredPassword}}
+                </div>
+                <div [ngClass]="{'text-left': currentLang == 'en', 'text-right': currentLang == 'en' }"
+                     *ngIf="loginFormControls.password.errors.maxLength" style="text-align: center">
+                  {{langVar.invalid.maxLength_15}}
+                </div>
+                <div [ngClass]="{'text-left': currentLang == 'en', 'text-right': currentLang == 'en' }"
+                     *ngIf="loginFormControls.password.errors.minLength" style="text-align: center">
+                  {{langVar.invalid.minLength_8}}
+                </div>
+                <div [ngClass]="{'text-left': currentLang == 'en', 'text-right': currentLang == 'en' }"
+                     *ngIf="loginFormControls.password.errors.pattern" style="text-align: center">
+                  {{langVar.invalid.InvalidPassword}}
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="p-field-checkbox" [ngClass]="{'text-right': currentLang == 'ar'}">
+                  <input class="mx-2 checkmark" id="checkbox" type="checkbox" [checked]=rememberME
+                         (click)="rememberMe($event)">
+                  <label for="checkbox">Remember me</label>
+                </div>
+              </div>
+
+            </div>
+            <div class="d-flex justify-content-center mt-2" *ngIf="!isLoading">
+              <button class="loginBtn " (click)="Login()" [ngClass]="{'button_disabled ' : !loginForm.valid}"
+                      [disabled]="!loginForm.valid">
+                {{langVar.login.login}}
+              </button>
+            </div>
+
+
+          </form>
+          <div class="text-center" *ngIf="isLoading">
+            <svg style="height:100px;" version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="10px" y="10px" viewBox="0 0 100 100"
+                 enable-background="new 0 0 0 0" xml:space="preserve">
+            <circle fill="#1346c6cf" stroke="none" cx="50" cy="50" r="2">
+            <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1" />
+
+
+
+              </circle>
+            <circle fill="#247DD6" stroke="none" cx="60" cy="50" r="2">
+            <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.2" />
+
+
+
+              </circle>
+            <circle fill="#0394F0" stroke="none" cx="70" cy="50" r="2">
+            <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.3" />
+
+
+
+              </circle>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--Internet connection checker toast/blocker-->
+
+<!--<p-blockUI [blocked]="noInternetConnection"></p-blockUI>-->

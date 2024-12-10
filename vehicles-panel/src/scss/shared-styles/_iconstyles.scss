@@ -1,0 +1,24 @@
+.fa-trash-alt:hover, .fa-window-close:hover {
+  color: red;
+}
+.fa-plus-circle:hover {
+  color: green;
+}
+.fa-edit:hover {
+  color: darkorange;
+}
+* {
+  outline: none;
+  text-decoration: none;
+}
+
+
+i, button {
+  outline-style: none;
+  cursor: pointer;
+  
+}
+
+*{
+outline-style:none;
+}

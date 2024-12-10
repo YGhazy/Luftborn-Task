@@ -1,0 +1,129 @@
+:host::ng-deep.p-dropdown {
+  width: 100%
+}
+:host::ng-deep p-dropdown {
+  width: 100%
+}
+:host::ng-deep.p-calendar {
+  width: 100%
+}
+:host::ng-deep.p-multiselect {
+  width: 100%
+}
+:host::ng-deep.p-checkbox-label {
+margin-bottom:0;
+}
+:host::ng-deep .arabic .p-dropdown .p-dropdown-clear-icon {
+  right: 0.357rem;
+}
+
+:host::ng-deep .arabic .p-checkbox-label {
+  margin-right: 0.5rem;
+}
+
+input {
+ 
+}
+.card-body{
+    position:relative;
+}
+img{
+    z-index:3;
+    cursor:pointer;
+}
+.card-body  {
+  transition: 1s all ease-in-out;
+}
+
+
+.modal-dialog {
+  max-width: 624px;
+}
+
+::ng-deep {
+  .ui-picklist .ui-picklist-list {
+    width: 22em;
+  }
+
+  .ui-picklist .ui-picklist-list {
+    scrollbar-width: thin;
+  }
+
+  .rfqPicklistTitle {
+    i {
+      float: right;
+      color: #116fbf;
+    }
+  }
+
+  .ui-picklist .ui-picklist-list .ui-picklist-item.ui-state-highlight {
+    i {
+      color: white;
+    }
+  }
+
+  .sEStyleOverride {
+    max-width: 90% !important;
+    width: 90% !important;
+  }
+
+  .p-paginator-bottom {
+    /*direction:ltr !important;*/
+  }
+
+  .p-paginator .p-dropdown .p-dropdown-label {
+    padding-right: 0.5rem;
+  }
+}
+
+::ng-deep {
+  .arabic {
+    .p-datatable-scrollable-header-table {
+      direction: rtl;
+    }
+
+    .p-paginator-current {
+      direction: rtl !important;
+    }
+
+    table {
+      direction: rtl;
+    }
+
+    .p-picklist-list-wrapper {
+      direction: rtl;
+    }
+  }
+
+  .arabic {
+    .rtlStyle {
+      .chatbox-open {
+        left: 0;
+        right: auto !important;
+      }
+    }
+
+    *[dir=rtl] .mr-auto, *[dir=rtl] .mx-auto {
+      margin-right: auto !important;
+    }
+
+    .ml-auto, .mx-auto {
+    }
+
+    .nav .navbar-nav {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+}
+  .app-header .d-md-block .navbar-toggler-icon {
+    display: none !important;
+  }
+.form-inline {
+  margin-left: auto;
+  margin-right: 3px;
+}
+.nav .navbar-nav {
+  margin-left: auto;
+  margin-right: 0;
+}

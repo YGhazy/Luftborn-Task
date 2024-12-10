@@ -1,0 +1,49 @@
+
+
+<div class="container mt-5">
+
+  <div class="d-flex justify-content-between">
+    <button pButton type="button" label="Logout" (click)="Logout()"></button>
+  </div>
+  <p-table [value]="FilteredVehicles"
+           [paginator]="true" [rows]="7" styleClass="prime-slider-override mt-5 mb-5">
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col style="width:150px">
+        <col style="width:150px">
+        <col style="width:150px">
+        <col style="width:150px">
+        <col style="width:150px">
+
+      </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="text-center">VIN</th>
+        <th class="text-center">Number</th>
+        <th class="text-center">Customer Name</th>
+        <th class="text-center">Status</th>
+        <th class="text-center">Last Ping</th>
+
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-Vehicle>
+      <tr>
+
+        <td class="text-center">{{Vehicle.vin}}</td>
+        <td class="text-center">{{Vehicle.number}}</td>
+        <td class="text-center">{{Vehicle.customer.userName}}</td>
+        <td class="text-center {{Vehicle.status}}" style="font-weight:500">{{Vehicle.status}}</td>
+        <td class="text-center"><strong *ngIf="checkDate(Vehicle.lastPing)">{{Vehicle.lastPing  | date: 'short'}}</strong></td>
+
+
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="5" class="text-center">No records found</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</div>

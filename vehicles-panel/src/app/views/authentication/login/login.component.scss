@@ -1,0 +1,307 @@
+.fa-eye, .fa-eye-slash{
+    position: absolute;
+    right:45px;
+    top: 17px;
+    left:auto;
+    cursor:pointer;
+}
+
+input{
+    text-transform: none;
+}
+
+input:autofill {
+    -webkit-transition-delay: 99999s;
+    transition-delay: 99999s;
+  }
+
+body,
+html,
+.ipadView {
+  overflow: hidden !important;
+}
+
+
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: #393939;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  color: #393939;
+  opacity: 0.66;
+  font-size: 0.9rem;
+}
+
+.fa {
+  color: #393939;
+  opacity: 0.66;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+}
+
+.alert {
+  background: transparent;
+  border: none;
+  color: #ff5b6a;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+label {
+  color: #393939cc;
+  font-size: 0.9rem;
+}
+
+.p-field-checkbox {
+  color: #393939;
+}
+.background {
+    height:100vh;
+}
+
+#LoginContainer {
+  border-radius: 16px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+.loginBtn {
+  margin-top: 10px;
+  color: #fff;
+  padding-top: 9px;
+  padding-right: 35px;
+  padding-bottom: 9px;
+  padding-left: 35px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 7px;
+  background-color: #0058a1;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.loginBtn:focus {
+  outline-style: none;
+  background-color: #0058a1cc;
+}
+
+.loginBtn:hover {
+  outline-style: none;
+  background-color: #0058a1cc;
+}
+
+input:hover,
+input:focus {
+  outline-style: none;
+  border: none;
+  border-bottom: solid 1px #707070;
+}
+
+input:not(#checkbox) {
+  width: 100%;
+  height: 34px;
+  font-size: 0.85rem;
+  color: #393939;
+  border: none;
+  border-bottom: solid 1px #707070;
+  border-radius: 0;
+  outline-style: none;
+}
+
+::placeholder {
+  color: #8d8d8d;
+  font-size: 0.85rem;
+}
+
+p {
+  text-align: left;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .loginTextContainer {
+    display: none;
+  }
+}
+
+.eyeAR {
+  right: 0;
+  left: 8px;
+}
+
+.button_disabled {
+  cursor: not-allowed;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.button_disabled:hover {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.sl-nav-en {
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  justify-content: space-between;
+}
+
+.sl-nav-ar {
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  right: 5rem;
+  justify-content: space-between;
+}
+
+.sl-nav-en ul,
+.sl-nav-ar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+}
+
+.sl-nav-en li,
+.sl-nav-ar li {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.sl-nav-en li ul,
+.sl-nav-ar li ul {
+  display: none;
+}
+
+.sl-nav-en li:hover ul,
+.sl-nav-ar li:hover ul {
+  position: absolute;
+  top: 29px;
+  right: -15px;
+  display: block;
+  background: #fff;
+  width: 120px;
+  padding-top: 0px;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sl-nav-en li:hover .triangle,
+.sl-nav-ar li:hover .triangle {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  z-index: 10;
+  height: 14px;
+  overflow: hidden;
+  width: 30px;
+  background: transparent;
+}
+
+.sl-nav-en li:hover .triangle:after,
+.sl-nav-ar li:hover .triangle:after {
+  content: "";
+  display: block;
+  z-index: 20;
+  width: 15px;
+  transform: rotate(45deg) translateY(0px) translatex(10px);
+  height: 15px;
+  background: #fff;
+  border-radius: 2px 0px 0px 0px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sl-nav-en li ul li,
+.sl-nav-ar li ul li {
+  position: relative;
+  text-align: left;
+  background: transparent;
+  padding: 15px 15px;
+  padding-bottom: 0;
+  z-index: 2;
+  font-size: 15px;
+  color: #3c3c3c;
+}
+
+.sl-nav-en li ul li:last-of-type,
+.sl-nav-ar li ul li:last-of-type {
+  padding-bottom: 15px;
+}
+
+.sl-nav-en li ul li span,
+.sl-nav-ar li ul li span {
+  padding-left: 5px;
+}
+
+.sl-nav-en li ul li span:hover,
+.sl-nav-en li ul li span.active,
+.sl-nav-ar li ul li span:hover,
+.sl-nav-ar li ul li span.active {
+  color: #146c78;
+}
+
+.sl-flag {
+  display: inline-block;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  width: 15px;
+  height: 15px;
+  background: #aaa;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.en-arrow {
+  bottom: 15px !important;
+  right: -18px !important;
+}
+
+.ar-arrow {
+  bottom: 15px !important;
+  right: 44px !important;
+}
+
+.brand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15vw;
+  height: 10vh;
+  text-align: center;
+
+  img {
+    margin-top: 1rem;
+    width: 160px;
+    height: 60px;
+  }
+}
+
+.brandAR {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15vw;
+  height: 10vh;
+  text-align: center;
+
+  img {
+    margin-top: 1rem;
+    width: 160px;
+    height: 60px;
+  }
+}
